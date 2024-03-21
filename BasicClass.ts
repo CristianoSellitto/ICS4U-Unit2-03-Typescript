@@ -30,7 +30,7 @@ export class BasicClass {
     return stackValues
   }
 
-  // Pushes the strings to the arary
+  // Pushes the strings to the array
   public push(string: string) {
     this.array.push(string)
   }
