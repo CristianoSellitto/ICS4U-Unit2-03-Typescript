@@ -16,6 +16,20 @@ export class BasicClass {
     this.array = []
   }
 
+  // Prints the array to the console
+  public get showStack() {
+    let stackValues = "This array is empty."
+
+    if (this.array.length > 0) {
+      stackValues = this.array[0]
+      for (let counter = 1; counter < this.array.length; counter++) {
+        stackValues = stackValues + ", " + this.array[counter]
+      }
+    }
+
+    return stackValues
+  }
+
   // Pushes the strings to the arary
   public push(string: string) {
     this.array.push(string)
@@ -37,20 +51,6 @@ export class BasicClass {
     }
 
     return removedValue
-  }
-
-  // Prints the array to the console
-  public get showStack() {
-    let stackValues = "This array is empty."
-
-    if (this.array.length > 0) {
-      stackValues = this.array[0]
-      for (let counter = 1; counter < this.array.length; counter++) {
-        stackValues = stackValues + ", " + this.array[counter]
-      }
-    }
-
-    return stackValues
   }
 }
 
